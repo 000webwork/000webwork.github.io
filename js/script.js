@@ -1,13 +1,15 @@
 'use strict';
 const FULLPAGE = 'js-fullpage';
 const MENU = 'js-menu';
+const LOADER = 'js-loader';
 
-window.addEventListener('DOMContentLoaded', wheel_handler);
-window.addEventListener('DOMContentLoaded', keydown_handler);
-window.addEventListener('DOMContentLoaded', touchmove_handler);
 window.addEventListener('DOMContentLoaded', mousemove_handler);
 window.addEventListener('DOMContentLoaded', hash_change);
 window.addEventListener('hashchange', hash_change);
+window.addEventListener('load', loader);
+window.addEventListener('load', wheel_handler);
+window.addEventListener('load', keydown_handler);
+window.addEventListener('load', touchmove_handler);
 let fullpage = document.getElementById(FULLPAGE);
 let sections = document.querySelectorAll(` #${FULLPAGE} > * `);
 let menu_anchors = document.querySelectorAll(` #${MENU} a `);
@@ -41,24 +43,24 @@ function wheel_handler() {
 }
 
 function keydown_handler() {
-  window.addEventListener("keydown", event => {
+  window.addEventListener('keydown', event => {
     if (event.defaultPrevented) return;
   
     switch(event.code) {
-      case "KeyS":
-      case "ArrowDown":
+      case 'KeyS':
+      case 'ArrowDown':
         scroll_page(1);
         break;
-      case "KeyW":
-      case "ArrowUp":
+      case 'KeyW':
+      case 'ArrowUp':
         scroll_page(-1);
         break;
-      case "KeyA":
-      case "ArrowLeft":
+      case 'KeyA':
+      case 'ArrowLeft':
         scroll_page(-1);
         break;
-      case "KeyD":
-      case "ArrowRight":
+      case 'KeyD':
+      case 'ArrowRight':
         scroll_page(1);
         break;
     }
@@ -71,7 +73,7 @@ function touchmove_handler() {
   window.addEventListener('touchstart', event => {
     startY = event.touches[0].clientY;
   });
-  window.addEventListener("touchmove", event => {
+  window.addEventListener('touchmove', event => {
     let deltaY = startY - event.changedTouches[0].clientY;
     if (deltaY > 50 || deltaY < -50) {
       scroll_page(deltaY);
@@ -80,8 +82,8 @@ function touchmove_handler() {
 }
 
 function mousemove_handler() {
-  let blur = document.querySelector(".blur");
-  document.addEventListener("mousemove", event => {
+  let blur = document.querySelector('.blur');
+  document.addEventListener('mousemove', event => {
     blur.style.background = 'radial-gradient(circle 30vw at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(200, 0, 200, 0.9) 0%, transparent 100%)';
   });
 }
@@ -127,6 +129,11 @@ function hash_change() {
   }
   current.classList.add('active');
   footer.classList.remove('active');
+}
+
+function loader() {
+  document.getElementById(LOADER).style.display = 'none';
+  document.querySelector('.background').style.zIndex = '0';
 }
 
 function sleep(ms) {

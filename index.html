@@ -21,6 +21,7 @@
     <link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
+    <div id='js-loader' class='loader'><object type='image/svg+xml' data='images/loader.svg' class='svg-object'></object></div>
     <div class='logo'>000webwork</div>
 
     <ul id='js-menu' class='menu'>
@@ -35,11 +36,11 @@
             <p class='fullpage__scroll-down'>Scroll Down</p>
             <div class='section__slide'>
                 <div class='title'>
-                    <div class='title__h1 _a_left-right'>Моё Портфолио</div>
-                    <div class='title__h2 _a_left-right _a_delay-01'>Начинающий Веб-разработчик /<br>Веб-верстальщик</div>
+                    <h1 class='title__head _a_left-right'>Моё Портфолио</h1>
+                    <h2 class='title__text _a_left-right _a_delay-01'>Начинающий Веб-разработчик /<br>Веб-верстальщик</h2>
                 </div>
                 <!-- <img src='images/flat-cms.svg'> -->
-                <object type="image/svg+xml" data="images/web-development-programmer.svg" class='svg-object' style='position: absolute; right: 2vw; bottom: 0; height: 90vh;'></object>
+                <object type='image/svg+xml' data='images/web-development-programmer.svg' class='svg-object svg-object--main _a_opacity'></object>
                 
                 <!-- <div class='image image--main'></div> -->
             </div>
@@ -47,9 +48,9 @@
 
         <div id='work' class='section'>
             <div class='section__slide'>
-                <div class='title'>
-                    <div class='title__h1 _a_left-right'>New Providence</div>
-                    <div class='title__h2 _a_left-right _a_delay-01'>Вёрстка лендинга с макета</div>
+                <div class='title _blend-difference'>
+                    <h1 class='title__head _a_left-right'>New Providence</h1>
+                    <h2 class='title__text _a_left-right _a_delay-01'>Вёрстка лендинга с макета</h2>
                     <a href='/template/New-Providence-by-Craftowork' class='anchor-button _a_opacity _a_delay-01'>Пример</a>
                 </div>
                 <a href='/template/New-Providence-by-Craftowork' class='image image--work'></a>
@@ -58,9 +59,19 @@
 
         <div id='about' class='section'>
             <div class='section__slide'>
-                <div class='title'>
-                    <div class='title__h1 _a_left-right'>Обо мне</div>
-                    <div class='title__h2 _a_left-right _a_delay-01'>Люблю компьютер...</div>
+                <div class='title' style='max-width: 30%;'>
+                    <h1 class='title__head _a_left-right'>Обо мне</h1>
+                    <h2 class='title__text _a_left-right _a_delay-01'>
+                        <p>Люблю компьютер, софт, программирование.</p>
+                        <p>Мои навыки:
+                            <ul>
+                                <li>HTML и CSS</li>
+                                <li>Адаптивная вёрстка</li>
+                                <li>Работа с медиа-запросами</li>
+                                <li>Владение JavaScript</li>
+                            </ul>
+                        </p>
+                    </h2>
                 </div>
                 <div class='skill-box _a_opacity _a_delay-01'>
                     <div class='skill-item sk-html'>
@@ -130,20 +141,20 @@
         <div id='contact' class='section'>
             <div class='section__slide'>
                 <div class='title'>
-                    <div class='title__h1 _a_left-right'>Связаться</div>
-                    <div class='title__h2 contact _a_left-right _a_delay-01'>
+                    <h1 class='title__head _a_left-right'>Связаться</h1>
+                    <h2 class='title__text contact _a_left-right _a_delay-01'>
                         <a href='mailto:000webwork@mail.ru' class='contact__mail'>000webwork@mail.ru</a>
                         <a href='' class='contact__telegram'>Telegram</a>
-                    </div>
+                    </h2>
                 </div>
-                <object type="image/svg+xml" data="images/flat-cms.svg" class='svg-object' style='position: absolute; top: 0; right: 6vw; bottom: 0; height: 80vh; margin: auto;'></object>
+                <object type='image/svg+xml' data='images/flat-cms.svg' class='svg-object svg-object--contact'></object>
             </div> 
          </div>
     </div>
 
-    <div class="background gradient">
-        <div class="blur"></div>
-        <div class="dots"></div>
+    <div class='background gradient'>
+        <div class='blur'></div>
+        <div class='dots'></div>
     </div>
 
     <footer id='footer'>

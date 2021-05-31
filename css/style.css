@@ -169,8 +169,11 @@ body {
     margin-top: 30vh;
     margin-left: 60px;
     z-index: 10;
-    mix-blend-mode: difference;
     pointer-events: none;
+}
+
+._blend-difference {
+    mix-blend-mode: difference;
 }
 
 .title a,
@@ -178,7 +181,7 @@ body {
     pointer-events: auto;
 }
 
-.title__h1 {
+.title__head {
     margin-bottom: 5vh;
     /* margin-top: 20vh; */
     font-size: 5em;
@@ -187,13 +190,28 @@ body {
     text-shadow: 0 5px 50px rgb(0 0 0 / 50%);
 }
 
-.title__h2 {
+.title__text {
     margin-bottom: 15vh;
     /* margin-top: 5vh; */
     font-size: 1.4em;
 }
 
-.title__h2 a {
+.title__text p:not(:nth-child(1)) {
+    padding-top: 5vh;
+}
+
+.title__text ul {
+    padding-top: 1vh;
+    list-style: '♥';
+}
+
+.title__text li {
+    position: relative;
+    padding-left: 1vh;
+    padding-top: 1vh;
+}
+
+.title__text a {
     color: #fff;
     text-decoration: none;
 }
@@ -218,6 +236,22 @@ body {
 .svg-object {
     pointer-events: none;
     user-select: none;
+}
+
+.svg-object--main {
+    position: absolute;
+    right: 2vw;
+    bottom: 0;
+    height: 90vh;
+}
+
+.svg-object--contact {
+    position: absolute;
+    top: 0;
+    right: 6vw;
+    bottom: 0;
+    height: 80vh;
+    margin: auto;
 }
 
 .image {
@@ -326,17 +360,12 @@ body {
 }
 
 .contact > a {
-    margin-bottom: 4vh;
-}
-
-.contact__mail,
-.contact__telegram {
     position: relative;
+    margin-bottom: 4vh;
     margin-left: 25px;
 }
 
-.contact__mail::before,
-.contact__telegram::before {
+.contact > a::before {
     content: '';
     position: absolute;
     display: block;
@@ -347,6 +376,14 @@ body {
     height: 20px;
     margin: auto;
     background: white;
+}
+
+.contact__mail::before {
+
+}
+
+.contact__telegram::before {
+
 }
 
 .contact__telegram {
@@ -365,11 +402,24 @@ footer.active {
     height: 100px;
 }
 
+.loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
 .background {
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
+    z-index: 99;
 }
   
 .gradient {
@@ -431,9 +481,6 @@ footer.active {
     transition-duration: 1s;
 }
 ._a_delay-01 {
-    transition-delay: calc(var(--inside-slide-delay) + 0.1s);
-}
-._a-delay-01 {
     transition-delay: calc(var(--inside-slide-delay) + 0.1s);
 }
 
