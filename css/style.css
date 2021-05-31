@@ -175,7 +175,7 @@ body {
 }
 
 .title--about {
-    width: 30%;
+    width: 40%;
 }
 
 ._blend-difference {
@@ -208,13 +208,17 @@ body {
 
 .title__text ul {
     padding-top: 1vh;
-    list-style: '♥';
 }
 
 .title__text li {
     position: relative;
     padding-left: 1vh;
     padding-top: 1vh;
+}
+
+.title__text li::before {
+    content: '•';
+    margin-right: 20px;
 }
 
 .title__text a {
@@ -286,17 +290,17 @@ body {
 .skill-box {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
+    height: 50%;
     width: 50%;
     margin: auto;
+    margin-left: 0;
 }
 
 .skill-item {
     display: flex;
     position: relative;
     align-items: center;
-    float: left;
     width: 30%;
 }
 
@@ -533,6 +537,7 @@ footer.active {
     }
 
     .logo {
+        top: 5vh;
         left: 10px;
         /* font-size: 1.8em; */
         /* font-size: 0.6em; */
@@ -586,22 +591,30 @@ footer.active {
         /* float: left; */
     }
 
+    .title--about .title__text {
+        margin-bottom: 0;
+    }
+
     .anchor-button {
         font-size: 0.4em;
     }
 
     .svg-object--main {
-        width: 90vw;
-        height: auto;
+        left: 0;
+        height: 60vh;
     }
 
     .svg-object--contact {
-        top: auto;
+        /* top: auto;
         right: 0;
         bottom: 5vh;
         left: 55px;
         width: 80vw;
-        height: auto;
+        height: auto; */
+        top: auto;
+        bottom: 5vh;
+        left: 80px;
+        height: 60vh;
     }
 
     .image {
@@ -621,12 +634,11 @@ footer.active {
 
     .skill-item {
         margin: 0 5%;
-        /* height: 30%; */
-        width: 30%;
+        height: 30%;
     }
 
     .skill-item__text {
-        font-size: 55%;
+        font-size: 3vh;
     }
 
 }
