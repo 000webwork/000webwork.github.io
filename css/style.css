@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.css');
 /* @import url('/MS Gothic.ttf'); */
 
 :root {
@@ -111,6 +112,7 @@ body {
     text-transform: uppercase;
     text-orientation: upright;
     writing-mode: vertical-rl;
+    z-index: 1;
     
     transform: translateY(200px);
     transition-property: transform;
@@ -170,6 +172,10 @@ body {
     margin-left: 60px;
     z-index: 10;
     pointer-events: none;
+}
+
+.title--about {
+    width: 30%;
 }
 
 ._blend-difference {
@@ -362,32 +368,22 @@ body {
 .contact > a {
     position: relative;
     margin-bottom: 4vh;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 .contact > a::before {
-    content: '';
     position: absolute;
-    display: block;
-    top: 0;
-    left: -25px;
-    bottom: 0;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    background: white;
+    left: -30px;
 }
 
 .contact__mail::before {
-
+    content: '\f0e0';
+    font-family: 'Font Awesome 5 Free';
 }
-
+    
 .contact__telegram::before {
-
-}
-
-.contact__telegram {
-
+    content: '\f3fe';
+    font-family: 'Font Awesome 5 Brands';
 }
 
 footer {
@@ -539,7 +535,8 @@ footer.active {
     .logo {
         left: 10px;
         /* font-size: 1.8em; */
-        font-size: 0.6em;
+        /* font-size: 0.6em; */
+        font-size: 4vh;
     }
 
     .menu {
@@ -575,11 +572,15 @@ footer.active {
         margin-left: 10px;
     }
 
-    .title__h1 {
+    .title--about {
+        width: auto;
+    }
+
+    .title__head {
         font-size: 1.2em;
     }
 
-    .title__h2 {
+    .title__text {
         font-size: 0.4em;
         margin-bottom: 4vh;
         /* float: left; */
@@ -587,6 +588,20 @@ footer.active {
 
     .anchor-button {
         font-size: 0.4em;
+    }
+
+    .svg-object--main {
+        width: 90vw;
+        height: auto;
+    }
+
+    .svg-object--contact {
+        top: auto;
+        right: 0;
+        bottom: 5vh;
+        left: 55px;
+        width: 80vw;
+        height: auto;
     }
 
     .image {
