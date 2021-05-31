@@ -1,0 +1,21 @@
+{
+    "name": "000WEBWORK",
+    "short_name": "000WEBWORK",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#152a8e",
+    "background_color": "#152a8e",
+    "start_url": "000webwork.github.io",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}
